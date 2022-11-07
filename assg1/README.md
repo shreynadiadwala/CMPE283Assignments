@@ -4,7 +4,7 @@
 
 2. Forked the repo -> https://github.com/torvalds/linux , as instructed. 
 
-3. Installed additional dependencies required to build a kernel using command "sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf". Ref - https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
+3. Installed additional dependencies required to build a kernel using command ***sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf***. Ref - https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
 
 4. Created structs of different MSRs in cmpe283-1.c file by referring to Intel SDM vol 3 and vol 3c. 
    Pinbased Controls referred from SDM vol 3, section 24.6.1
@@ -13,8 +13,7 @@
    Procbased Primary Controls referred from SDM vol 3c, section 24.6.2
    Procbased Secondary Controls referred from SDM vol 3, section 24.6.2
    
-5. Executed the code module using "make" command. Then inserted module using "sudo insmod cmpe283-1.ko" command. Checked the output using "sudo dmesg" command.
-   Initially encountered error beacuse the VTX was not enabled on VMware homescreen on my workstation, but resolved it was after enabling it.
+5. Executed the code module using ***make*** command. Then inserted module using ***sudo insmod cmpe283-1.ko*** command. Checked the output using ***sudo dmesg*** command.Initially encountered error beacuse the VTX was not enabled on VMware homescreen on my workstation, but resolved it was after enabling it.
 
 ## Steps to execute and check the output:
 
@@ -22,15 +21,15 @@
 
 2. Create Ubuntu virtual machine with 20.04 OS version. Enable VTX feature from VMware settings on its home screen.
 
-3. Install git by executing "sudo apt install git". Clone the repo "https://github.com/torvalds/linux" by executing "git clone https://github.com/torvalds/linux.git".
+3. Install git by executing "sudo apt install git". Clone the repo "https://github.com/torvalds/linux" by executing ***git clone https://github.com/torvalds/linux.git***
 
 4. Download cmpe283-1.c file and make file from canvas. Download these files in previous step's cloned repo's folder (create a folder with your desired name in repo folder and download these files from canvas in it).
 
-5. Execute "sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf" to install additional dependencies required to build a kernel. 
+5. Execute ***sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf*** to install additional dependencies required to build a kernel. 
 
-6. Build the module by executing "make". Insert or load the module by executing "insmod cmpe283-1.ko". Then see the output by "sudo dmesg". 
+6. Build the module by executing ***make***. Insert or load the module by executing ***insmod cmpe283-1.ko***. Then see the output by ***sudo dmesg***. 
 
-7. Unload the module using "sudo rmmod cmpe283-1.ko". Clean make file using "make clean". 
+7. Unload the module using ***sudo rmmod cmpe283-1.ko***. Clean make file using ***make clean***. 
 
 ## Outputs 
 
