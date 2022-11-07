@@ -13,7 +13,7 @@
    Procbased Primary Controls referred from SDM vol 3c, section 24.6.2
    Procbased Secondary Controls referred from SDM vol 3, section 24.6.2
    
-5. Executed the code module using ***make*** command. Then inserted module using ***sudo insmod cmpe283-1.ko*** command. Checked the output using ***sudo dmesg*** command.Initially encountered error beacuse the VTX was not enabled on VMware homescreen on my workstation, but resolved it was after enabling it.
+5. Executed the code module using ***make*** command. Then inserted module using ***sudo insmod cmpe283-1.ko*** command. Checked the output using ***sudo dmesg*** command.Initially encountered error beacuse the VTX was not enabled on VMware homescreen on my workstation, but it was resolved after enabling it.
 
 ## Steps to execute and check the output:
 
