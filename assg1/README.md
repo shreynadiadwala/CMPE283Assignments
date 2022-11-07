@@ -23,7 +23,7 @@
 
 3. Install git by executing "sudo apt install git". Clone the repo "https://github.com/torvalds/linux" by executing ***git clone https://github.com/torvalds/linux.git***
 
-4. Download cmpe283-1.c file and make file from canvas. Download these files in previous step's cloned repo's folder (create a folder with your desired name in repo folder and download these files from canvas in it).
+4. Download this cmpe283-1.c file and make file from canvas submission. Download these files in previous step's cloned repo's folder (create a folder with your desired name in repo folder and download these files from canvas in it).
 
 5. Execute ***sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf*** to install additional dependencies required to build a kernel. 
 
