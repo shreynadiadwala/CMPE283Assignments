@@ -16,6 +16,7 @@
 #define IA32_VMX_ENTRY_CTLS 0x484
 #define IA32_VMX_PROCBASED_CTLS 0x482
 #define IA32_VMX_PROCBASED_CTLS2 0x48B
+#define IA32_VMX_PROCBASED_CTLS3 0x492
 
 /*
  * struct caapability_info
@@ -148,6 +149,18 @@ struct capability_info procbasedSecondary[27] =
 	};
 
 /*
+ * Procbased Tertiary Controls capabilities
+ * See SDM volume 3, section 24.6.2
+ */
+struct capability_info procbasedTertiary[4] = 
+	{ 
+		{0, "LOADIWKEY Exiting"},
+		{1, "Enable HLAT"}, 
+		{2, "EPT Paging-write Control"},
+		{3, "Guest-paging Verification"},
+	};
+
+/*
  * report_capability
  *
  * Reports capabilities present in 'cap' using the corresponding MSR values
@@ -218,6 +231,12 @@ detect_vmx_features(void)
 	pr_info("Procbased Secondary Controls MSR: 0x%llx\n",
 		(uint64_t)(lo | (uint64_t)hi << 32));
 	report_capability(procbasedSecondary, 27, lo, hi);
+
+	/* Procbased Tertiary controls */
+	rdmsr(IA32_VMX_PROCBASED_CTLS3, lo, hi);
+	pr_info("Procbased Tertiary Controls MSR: 0x%llx\n",
+		(uint64_t)(lo | (uint64_t)hi << 32));
+	report_capability(procbasedTertiary, 4, lo, hi);
 }
 
 /*
