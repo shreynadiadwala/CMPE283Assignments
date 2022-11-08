@@ -12,8 +12,10 @@
    Entry Controls referred from SDM vol 3c, section 24.8.1
    Procbased Primary Controls referred from SDM vol 3c, section 24.6.2
    Procbased Secondary Controls referred from SDM vol 3, section 24.6.2
+   Procbased Tertiary Controls referred from SDM vol 3, section 24.6.2
+
    
-5. Executed the code module using ***make*** command. Then inserted module using ***sudo insmod cmpe283-1.ko*** command. Checked the output using ***sudo dmesg*** command.Initially encountered error beacuse the VTX was not enabled on VMware homescreen on my workstation, but it was resolved after enabling it.
+5. Executed the code module using ***make*** command. Then inserted module using ***sudo insmod cmpe283-1.ko*** command. Checked the output using ***sudo dmesg*** command.Initially encountered error beacuse the VTX was not enabled on VMware homescreen on my workstation, but it was resolved after enabling it. Lastly added MSR struct for procbased tertiary controls as could not find its reference during the first time.
 
 ## Steps to execute and check the output:
 
@@ -48,3 +50,5 @@
 ### Procbased Secondary Controls
 ![assg1-procbased secondary](https://user-images.githubusercontent.com/89545745/200206933-1a59264e-781e-439f-a8ba-5ff0c530eb3d.png)
 
+### Procbased Tertiary Controls
+![assg1-procbased tertiary](https://user-images.githubusercontent.com/89545745/200485823-6e040998-ba57-48d8-bd3a-28490432fc55.png)
